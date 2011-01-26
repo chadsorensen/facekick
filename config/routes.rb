@@ -1,4 +1,8 @@
 Facekick::Application.routes.draw do
+  resources :volunteers
+
+  resources :non_profits
+
   get "public/index"
   
   match "" => "public#index"

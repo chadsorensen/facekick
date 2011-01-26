@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  bio: MyString
+  image: MyString
+  pledge: 1
+  hours: 1
+
+two:
+  name: MyString
+  bio: MyString
+  image: MyString
+  pledge: 1
+  hours: 1

@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @volunteer.name %>
+</p>
+
+<p>
+  <b>Bio:</b>
+  <%= @volunteer.bio %>
+</p>
+
+<p>
+  <b>Image:</b>
+  <%= @volunteer.image %>
+</p>
+
+<p>
+  <b>Pledge:</b>
+  <%= @volunteer.pledge %>
+</p>
+
+<p>
+  <b>Hours:</b>
+  <%= @volunteer.hours %>
+</p>
+
+
+<%= link_to 'Edit', edit_volunteer_path(@volunteer) %> |
+<%= link_to 'Back', volunteers_path %>

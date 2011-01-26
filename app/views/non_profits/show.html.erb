@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @non_profit.name %>
+</p>
+
+<p>
+  <b>Mission:</b>
+  <%= @non_profit.mission %>
+</p>
+
+<p>
+  <b>Bio:</b>
+  <%= @non_profit.bio %>
+</p>
+
+<p>
+  <b>Image:</b>
+  <%= @non_profit.image %>
+</p>
+
+<p>
+  <b>Pledge:</b>
+  <%= @non_profit.pledge %>
+</p>
+
+<p>
+  <b>Hours:</b>
+  <%= @non_profit.hours %>
+</p>
+
+
+<%= link_to 'Edit', edit_non_profit_path(@non_profit) %> |
+<%= link_to 'Back', non_profits_path %>
