@@ -1,4 +1,8 @@
 Facekick::Application.routes.draw do
+  get "public/index"
+  
+  match "" => "public#index"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
