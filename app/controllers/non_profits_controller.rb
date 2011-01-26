@@ -80,4 +80,18 @@ class NonProfitsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+  private
+
+  def handle_image_upload(params)
+    if params[:image]
+      uploaded_io = params[:image]
+      File.open(Rails.root.join('public', 'images','non_profits',
+          uploaded_io.original_filename), 'wb') do |file|
+        file.write(uploaded_io.read)
+      end
+      params[:non_profit]['image'] = uploaded_io.original_filename
+    end
+  end
+  
 end
