@@ -40,6 +40,8 @@ class NonProfitsController < ApplicationController
   # POST /non_profits
   # POST /non_profits.xml
   def create
+    handle_image_upload(params)
+    
     @non_profit = NonProfit.new(params[:non_profit])
 
     respond_to do |format|
@@ -56,6 +58,8 @@ class NonProfitsController < ApplicationController
   # PUT /non_profits/1
   # PUT /non_profits/1.xml
   def update
+    handle_image_upload(params)
+    
     @non_profit = NonProfit.find(params[:id])
 
     respond_to do |format|
