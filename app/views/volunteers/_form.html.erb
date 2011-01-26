@@ -17,11 +17,11 @@
   </div>
   <div class="field">
     <%= f.label :bio %><br />
-    <%= f.text_field :bio %>
+    <%= f.text_area :bio %>
   </div>
   <div class="field">
-    <%= f.label :image %><br />
-    <%= f.text_field :image %>
+    <%= label :image, 'Image' %><br />
+    <%= file_field_tag 'image' %>
   </div>
   <div class="field">
     <%= f.label :pledge %><br />

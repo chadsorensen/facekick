@@ -40,6 +40,8 @@ class VolunteersController < ApplicationController
   # POST /volunteers
   # POST /volunteers.xml
   def create
+    handle_image_upload(params)
+    
     @volunteer = Volunteer.new(params[:volunteer])
 
     respond_to do |format|
@@ -56,6 +58,8 @@ class VolunteersController < ApplicationController
   # PUT /volunteers/1
   # PUT /volunteers/1.xml
   def update
+    handle_image_upload(params)
+    
     @volunteer = Volunteer.find(params[:id])
 
     respond_to do |format|
@@ -80,4 +84,18 @@ class VolunteersController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+  private
+
+  def handle_image_upload(params)
+    if params[:image]
+      uploaded_io = params[:image]
+      File.open(Rails.root.join('public', 'images','volunteers',
+          uploaded_io.original_filename), 'wb') do |file|
+        file.write(uploaded_io.read)
+      end
+      params[:volunteer]['image'] = uploaded_io.original_filename
+    end
+  end
+
 end
