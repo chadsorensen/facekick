@@ -3,12 +3,121 @@
 <head>
   <title>Facekick</title>
   <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag :defaults %>
+  <%= javascript_include_tag :all %>
   <%= csrf_meta_tag %>
 </head>
 <body>
 
+  <header>
+            <div id="header-wrap">
+              <div id="logo-wrap">
+                <a href="#">
+                <h1 id="logo">Fundit</h1>
+                <h2 id="tagline">A Place for Non-Profits</h2>
+                </a>
+              </div><!-- end of logo-wrap -->
+              
+              <ul id="funds">
+                <li>I'm a Non-Profit Organization <a href="/non_profits/new">button</a></li>
+                <li>I'm a Volunteer or Donor <a href="/volunteers/new">button</a></li>
+                <li id="banner">New Non-Profit</li>
+              </ul>
+              
+              <ul id="login">
+                <li id="current-state">You are not logged in!</li>
+                <li><a href="#">Register</a>|</li>
+                <li><a href="volunteer.html">Login</a></li>
+              </ul>
+            </div>
+  </header>
+
 <%= yield %>
 
+  
+
+          <div id="content-wrap">
+              
+            <div id="slideshow-wrap">
+              <div id="slideshow-inner">
+                
+              <div id="slideshow">
+                <img src="/images/img1.jpg" alt="img1" />
+                <img src="/images/img2.jpg" alt="img2" data-caption="#htmlCaption" />
+                <img src="/images/img3.jpg" alt="img3" />
+              </div><!-- end of slideshow -->
+              
+              <!-- captions for slideshow -->
+              <span class="orbit-caption" id="htmlCaption"><strong>I'm A Badass Caption:</strong> I can haz <a href="#">links</a>, <em>style</em> or anything that is valid markup :)</span>
+              
+              </div><!-- end of slideshow-inner -->
+            </div><!-- end of slideshow-wrap -->
+              
+  
+            <div id="cat-wrap">
+              <ul id="categories">
+                <li id="cat-title">Category</li>
+                <li><a href="#">Art &amp; Media</a></li>
+                <li><a href="#">Communication</a></li>
+                <li><a href="#">Environmental</a></li>
+                <li><a href="#">Human Rights</a></li>
+                <li><a href="#">Animal Rights</a></li>
+              </ul>
+            </div><!-- end of cat-wrap -->
+            
+            <div id="ticker-wrap">
+              <div id="ticker">
+                <h3>Fundt helped raise &#36;<span id="ticker-money">5,053.45</span> and  <span id="ticker-hours">5645</span> hours so far.</h3>
+              </div><!-- end of ticker -->
+            </div><!-- end of ticker-wrap -->
+              
+              
+            <div id="featured-wrap">
+              <ul>
+                <li><h4>Featured Organization</h4><span class="featured-img"><img src="/images/featured1.jpg" /></span><span class="caption">Tree Planting</span><br /><a href="#">button</a></li>
+                <li><h4>Featured Organization</h4><span class="featured-img"><img src="/images/featured2.jpg" /></span><span class="caption">Grow Rice</span><br /><a href="#">button</a></li>
+                <li><h4>Featured Volunteer</h4><span class="featured-img"><img src="/images/featured3.jpg" /></span><span class="caption">Jimmy Farmley</span><br /><a href="#">button</a></li>
+                <li><h4>Featured Donor</h4><span class="featured-img"><img src="/images/featured4.jpg" /></span><span class="caption">Jane Doe</span><br /><a href="#">button</a></li>
+              </ul>
+            </div><!-- end of featured-wrap -->
+
+            </div><!-- end of content-wrap -->
+
+
+        <footer>
+          <div id="footer-wrap">
+            <ul id="footer-cat-wrap">
+              <li class="title">Categories
+                <ul>
+                  <li><a href="#">Art &amp; Media</a></li>
+                  <li><a href="#">Communication</a></li>
+                  <li><a href="#">Environmental</a></li>
+                  <li><a href="#">Human Rights</a></li>
+                  <li><a href="#">Animal Rights</a></li>
+                </ul>
+              </li>
+              <li class="title">Contact
+                <ul>
+                  <li><address>P.O. Box 1869<br />Portland, OR</address></li>
+                  <li>Phone 503.558.0550</li>
+                  <li>Fax 503.558.0992</li>
+                  <li>Map...</li>
+                </ul>
+              </li>
+              <li class="title">Like us on Facebook
+                <ul id="facebook">
+                  <li>like img...  100 People like this</li>
+                  <li class="clear">Grow Rice in South America<span class="like">5 People like this</span></li>
+                  <li class="clear">1000 Tree Planting in New Mexico<span class="like">16 People like this</span></li>
+                </ul>
+              </li>
+              <li class="title">Follow us on Twitter
+                <ul id="twitter">
+                  <li class="clear">Check out our organization of the day:<span class="org-day">http://waterdata.gov</span><span class="org-meta">6 hours ago | <a href="#">reply</a></span></li>
+                  <li class="clear">Check out our organization of the day:<span class="org-day">http://waterdata.gov</span><span class="org-meta">8 days ago | <a href="#">reply</a></span></li>
+                </ul>
+              </li>
+            </ul>
+          </div><!-- end of footer-wrap -->
+        </footer> 
 </body>
 </html>

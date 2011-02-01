@@ -1,0 +1,155 @@
+/* CSS for jQuery Orbit Plugin 1.2
+ * www.ZURB.com/playground
+ * Copyright 2010, ZURB
+ * Free to use under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
+
+
+/* CONTAINER
+   ================================================== */
+
+div.orbit-wrapper {
+		margin: 0 auto;
+		width: 960px;
+ }
+
+div.orbit {
+    width: 1px;
+    height: 1px;
+    overflow: hidden }
+
+div.orbit img {
+		border: 4px solid #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none; }
+
+div.orbit a img {
+    border: none }
+
+.orbit div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+
+
+/* TIMER
+   ================================================== */
+
+div.timer {
+    display: none; }
+
+span.rotator {
+    display: none; }
+
+span.mask {
+    display: none; }
+
+span.rotator.move {
+    left: 0 }
+
+span.mask.move {
+    display: none; }
+
+span.pause {
+    display: none; }
+
+span.pause.active {
+    display: none; }
+
+div.timer:hover span.pause,
+span.pause.active {
+    display: none; }
+
+
+/* CAPTIONS
+   ================================================== */
+
+.orbit-caption {
+    display: none;
+    font-family: 'Century Gothic', Arial, Helvetica, Verdana, sans-serif; }
+
+.orbit-wrapper .orbit-caption {
+    background: #000;
+    background: rgba(0,0,0,.6);
+    z-index: 1000;
+    color: #fff;
+    padding: 7px 10px;
+    font-size: 13px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 960px; }
+
+
+/* DIRECTIONAL NAV
+   ================================================== */
+
+div.slider-nav {
+    display: block }
+
+div.slider-nav span {
+    width: 78px;
+    height: 100px;
+    text-indent: -9999px;
+    position: absolute;
+    z-index: 1000;
+    top: 50%;
+    margin-top: -50px;
+    cursor: pointer; }
+
+div.slider-nav span.right {
+    background: url(../img/orbit/right-arrow.png);
+    right: 0; }
+
+div.slider-nav span.left {
+    background: url(../img/orbit/left-arrow.png);
+    left: 0; }
+
+/* BULLET NAV
+   ================================================== */
+
+.orbit-bullets {
+    position: absolute;
+    z-index: 1000;
+    list-style: none;
+    bottom: 220px;
+    left: 0;
+    padding: 0;
+ 		top: 120px; }
+
+.orbit-bullets li {
+    cursor: pointer;
+    color: #999;
+    text-indent: -9999px;
+    background: url(../img/orbit/bullets.jpg) no-repeat 4px 0;
+    width: 13px;
+		margin: 0 0 10px 0;
+    height: 12px;
+    overflow: hidden; }
+
+.orbit-bullets li.active {
+    color: #222;
+    background-position: -8px 0; }
+    
+.orbit-bullets li.has-thumb {
+    background: none;
+    width: 100px;
+    height: 75px; }
+
+.orbit-bullets li.active.has-thumb {
+    background-position: 0 0;
+    border-top: 2px solid #000; }
+
+
+
+
+#slidshow { 
+	width: 920px;
+	height: 450px;
+	background: #000 url('../img/orbit/loading.gif') no-repeat center center; overflow: hidden; }
+		     
+#slideshow img, #slideshow div { display: none; }
