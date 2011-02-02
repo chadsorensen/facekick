@@ -1,0 +1,5 @@
+cd facekick
+git init
+git add .
+git commit -m "Message"
+git push origin master
