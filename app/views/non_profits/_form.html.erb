@@ -16,6 +16,10 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
+    <%= f.label :password %><br />
+    <%= password_field(:non_profit, :password) %>
+  </div>
+  <div class="field">
     <%= f.label :mission %><br />
     <%= f.text_field :mission %>
   </div>

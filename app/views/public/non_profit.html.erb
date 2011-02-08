@@ -1,44 +1,22 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Facekick</title>
-  <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag :all %>
-  <%= csrf_meta_tag %>
-</head>
-<body>
-
-  <body>
-      <div id="page-wrap">
-           <header>
-            <div id="header-wrap">
-              <div id="logo-wrap">
-                <a href="#">
-                <h1 id="logo">Fundit</h1>
-                <h2 id="tagline">A Place for Non-Profits</h2>
-                </a>
-              </div><!-- end of logo-wrap -->
-              
-              <ul id="funds">
-                <li id="org"><h3>I'm a Non-Profit Organization</h3> <a href="#">Get Funds</a></li>
-                <li id="vol"><h3>I'm a Volunteer or Donor</h3> <a href="#">Give Funds</a></li>
-                <li id="banner"><span><h4>New Non-Profit</h4></span></li>
-              </ul>
-              
-            <!--  <ul id="login">
-                <li id="current-state">You are not logged in!</li>
-                <li><a href="#">Register</a>|</li>
-                <li><a href="volunteer.html">Login</a></li>
-              </ul> -->
-            </div>
-           </header>
-
-
+<%= yield %>
 
   
 <div id="content-wrap">
-              <%= yield %>
-            
+              
+            <div id="slideshow-wrap">
+              <div id="slideshow-inner">
+                
+              <div id="slideshow">
+                <img src="img/img1.jpg" alt="img1" />
+                <img src="img/img2.jpg" alt="img2" data-caption="#htmlCaption" />
+                <img src="img/img3.jpg" alt="img3" />
+              </div><!-- end of slideshow -->
+              
+              <!-- captions for slideshow -->
+              <span class="orbit-caption" id="htmlCaption"><strong>I'm A Badass Caption:</strong> I can haz <a href="#">links</a>, <em>style</em> or anything that is valid markup :)</span>
+              
+              </div><!-- end of slideshow-inner -->
+            </div><!-- end of slideshow-wrap -->
               
   
             <div id="cat-wrap">
@@ -61,10 +39,10 @@
             <div id="featured-wrap">
               <ul>
                 
-               <li><h4>Featured Organization</h4><span class="featured-img"><%= image_tag "featured1.jpg" %></span><span class="caption">Tree Planting</span><br /><a href="#">button</a></li>
-                <li><h4>Featured Organization</h4><span class="featured-img"><%= image_tag "featured2.jpg" %></span><span class="caption">Grow Rice</span><br /><a href="#">button</a></li>
-                <li><h4>Featured Volunteer</h4><span class="featured-img"><%= image_tag "featured3.jpg" %></span><span class="caption">Jimmy Farmley</span><br /><a href="#">button</a></li>
-                <li><h4>Featured Donor</h4><span class="featured-img"><%= image_tag "featured4.jpg" %></span><span class="caption">Jane Doe</span><br /><a href="#">button</a></li>
+                <li><h4>Featured Organization</h4><span class="featured-img"><img src="img/featured1.jpg" /></span><span class="caption">Tree Planting</span><br /><a href="#">button</a></li>
+                <li><h4>Featured Organization</h4><span class="featured-img"><img src="img/featured2.jpg" /></span><span class="caption">Grow Rice</span><br /><a href="#">button</a></li>
+                <li><h4>Featured Volunteer</h4><span class="featured-img"><img src="img/featured3.jpg" /></span><span class="caption">Jimmy Farmley</span><br /><a href="#">button</a></li>
+                <li><h4>Featured Donor</h4><span class="featured-img"><img src="img/featured4.jpg" /></span><span class="caption">Jane Doe</span><br /><a href="#">button</a></li>
               </ul>
             </div><!-- end of featured-wrap -->
 
@@ -88,12 +66,12 @@
                   <li><address>P.O. Box 1869<br />Portland, OR</address></li>
                   <li>Phone 503.558.0550</li>
                   <li>Fax 503.558.0992</li>
-                  <li><%= image_tag "mainpage/map.png" %></li>
+                  <li><img src="img/mainpage/map.png" width="200px" /></li>
                 </ul>
               </li>
               <li class="title">Like us on Facebook
                 <ul id="facebook">
-                  <li class="clear"><a href="#"><%= image_tag "mainpage/facebook_like.png" %></a> 100 People like this</li>
+                  <li class="clear"><a href="#"><img src="img/mainpage/facebook_like.png" /></a> 100 People like this</li>
                   <li class="clear">Grow Rice in South America<span class="like">5 People like this</span></li>
                   <li class="clear">1000 Tree Planting in New Mexico<span class="like">16 People like this</span></li>
                 </ul>
@@ -105,7 +83,7 @@
                 </ul>
               </li>
             </ul>
-            <div id="footer-logo"><%= image_tag "mainpage/footer_logo.png" %></div>
+            <div id="footer-logo"><img src="img/mainpage/footer_logo.png" /></div>
           </div><!-- end of footer-wrap -->
         </footer> 
       </div><!-- end of page-wrap -->

@@ -116,8 +116,7 @@ div.slider-nav span.left {
     position: absolute;
     z-index: 1000;
     list-style: none;
-    bottom: 220px;
-    left: 0;
+    left: 40px;
     padding: 0;
  		top: 120px; }
 
@@ -125,15 +124,15 @@ div.slider-nav span.left {
     cursor: pointer;
     color: #999;
     text-indent: -9999px;
-    background: url(../img/orbit/bullets.jpg) no-repeat 4px 0;
-    width: 13px;
+    background: url(../img/mainpage/controller1.png) no-repeat 4px 0;
+    width: 19px;
 		margin: 0 0 10px 0;
     height: 12px;
     overflow: hidden; }
 
 .orbit-bullets li.active {
     color: #222;
-    background-position: -8px 0; }
+    background: url(../img/mainpage/controller2.png) no-repeat 4px 0; }
     
 .orbit-bullets li.has-thumb {
     background: none;

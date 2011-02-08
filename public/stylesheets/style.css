@@ -7,7 +7,10 @@ mark, rp, rt, ruby, summary, time { display: inline; }
 
 /* Site-wide properties ======================================================== */
 
-body { background-color: #E9E9E9; color: #292524; font: normal normal 13px/20px 'Century Gothic', Arial, Helvetica, Verdana, sans-serif; }
+body { background-color: #666; color: #292524; font: normal normal 13px/20px 'Century Gothic', Arial, Helvetica, Verdana, sans-serif; }
+
+#page-wrap { margin: 0 auto; width: 1000px; }
+
     
     /* Fibonacci based heading scale ratio */
 
@@ -18,7 +21,7 @@ body { background-color: #E9E9E9; color: #292524; font: normal normal 13px/20px 
 
 		/* links */
 		
-		a:link, a:visited { color: #292524; }
+		a:link, a:visited { color: #444; }
 		a:hover, a:active { color: #23D2FD; }
 
 /* Reusable classes ============================================================ */
@@ -35,16 +38,28 @@ body { background-color: #E9E9E9; color: #292524; font: normal normal 13px/20px 
 
     /* Header */
 
-    header { border-bottom: 1px solid #000; float: left; width: 100%; }
-			header #header-wrap { margin: 0 auto; position: relative; width: 960px; }
-			header #logo-wrap { float: left; margin: 20px 0 0 0; padding: 10px 106px 10px 0; }
-			header #logo-wrap h1 { font-size: 83px; font-weight: bold; margin: 15px 0 30px 0; }
-			header #logo-wrap h2 { color: #999; font-size: 21px; font-weight: 100; }
-			header #logo-wrap a:link, header #logo-wrap a:visited, header #logo-wrap a:hover, header #logo-wrap a:active  { color: #292524; }
+    header { float: left; width: 100%; }
+			header #header-wrap { background: url(../images/mainpage/header_border.png) no-repeat 0 140px #e9e9e9; height: 190px; position: relative; }
+			header #logo-wrap { float: left; margin: 10px 0 0 30px; }
+			header #logo-wrap h1 { text-indent: -9999px; }
+			header #logo-wrap h2 { text-indent: -9999px; }
+			header #logo-wrap a { background: url(../images/mainpage/logo.png) no-repeat 0 0; color: #292524; float: left; height: 140px; width: 300px; }
 			
-			header #funds { float: right; margin: 20px 0 0 0; }
-			header #funds li { display: block; float: left; padding: 10px 20px; width: 165px; }
-			header #funds li a { float: left; margin: 30px -41px 0 0; }
+			header #funds { float: right; }
+			header #funds li { background: url(../images/mainpage/top_buttons_separator.png) no-repeat 10px 0;  display: block; float: left; height: 155px; padding: 0 0 0 50px; width: 165px; }
+			
+			header #funds li h3 { color: #777; font-size: 18px; font-weight: bold; margin: 30px 0 10px 10px; text-transform: uppercase; }
+			header #funds li a { float: left; height: 40px; margin: 10px 0 0 10px; text-indent: -9999px; width: 160px; }
+			
+			header #funds #org a:link, header #funds #org a:visited { background: url(../images/mainpage/top_buttons_get_funds.png) no-repeat 0 0; }
+			header #funds #org a:hover, header #funds #org a:active { background: url(../images/mainpage/top_buttons_get_funds.png) no-repeat 0 -54px; }
+			
+			header #funds #vol a:link, header #funds #vol a:visited { background: url(../images/mainpage/top_buttons_give_funds.png) no-repeat 0 0; }
+			header #funds #vol a:hover, header #funds #vol a:active { background: url(../images/mainpage/top_buttons_give_funds.png) no-repeat 0 -55px; }
+			
+			header #funds #banner span { background: url(../images/mainpage/corner_ribbon.png) no-repeat 35px 0; display: block; height: 155px; position: relative; width: 165px; }
+			
+			header #funds #banner span h4 { color: #f8f8f8; font-size: 13px; left: 70px; position: absolute; top: 38px;  -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); text-shadow: 0px 1px 1px #222; }
 			
 			header #login { font-size: 11px; left: 500px; position: absolute; top: 0; }
 			header #login li { float: left; }
@@ -55,102 +70,121 @@ body { background-color: #E9E9E9; color: #292524; font: normal normal 13px/20px 
 
 		#content-wrap { position: relative; width: 100%; }
 			
-			#slideshow-wrap { border-bottom: 1px solid #000; float: left; margin: 0 0 10px 0; padding: 0 0 25px 0; width: 100%; }
-				#slideshow-inner { height: 355px; margin: 20px auto 0 auto; position: relative; width: 960px; }
+			#slideshow-wrap { background-color: #e9e9e9; float: left; margin: 0 0 10px 0; padding: 0 0 25px 0; width: 100%; }
+				#slideshow-inner { height: 355px; margin: -23px 0 10px -20px; position: relative; width: 1000px; }
 		
-			#cat-wrap { border-bottom: 1px solid #000; border-top: 1px solid #000; float: left; margin: 40px 0 0 0; padding: 5px 0; width: 100%; }
-				#categories { margin: 0 auto; width: 960px; }
-				#categories li { border-right: 1px solid #000; display: inline; font-size: 18px; font-weight: bold; text-transform: lowercase; margin: 0 23px 0 0; padding: 0 23px 0 0; }
-				#categories li:last-child { border-right: none; margin: 0; padding: 0; }
-				#categories #cat-title { font-size: 20px; text-transform: uppercase; }
+			#cat-wrap { background: url(../images/mainpage/full_page_border.png) no-repeat 0 0 #e9e9e9; float: left; margin: -55px 0 0 0; width: 100%; } 
+				#categories { background: url(../images/mainpage/category_bg.png) no-repeat 0 0; background-color: #e9e9e9; height: 120px; margin: 40px 0 0 0; }
+				#categories li { background: url(../images/mainpage/category_nav_separator.png) no-repeat 100% 0; display: inline; float: left; font-size: 17px; font-weight: bold; height: 100%; text-transform: lowercase; margin: 21px 8px 0 0; padding: 10px 36px 0 0; }
+				#categories li#first-cat { margin: 21px 8px 0 220px; }
+				#categories li:last-child { background-image: none; margin-right: 0; padding: 10px 0 0 0; }
+				#categories li a { float: left; text-align: right; width: 112%; }
+				#categories li a:hover, #categories li a:active {  background: url(../images/mainpage/category_nav_hover.png) no-repeat -1px 6px; }
 				
-			#ticker-wrap { float: left; margin: 60px 0 0 0; width: 100%; }
-				#ticker { color: #565658; margin: 0 auto; font-size: 19px; text-align: center; text-transform: uppercase; width: 960px; }
+			#ticker-wrap { float: left; width: 100%; }
+				#ticker { background-color: #e9e9e9; color: #666; margin: -40px 0 0 0; font-size: 19px; padding: 10px 0 10px 0; text-align: center; text-transform: uppercase; }
 				#ticker span { color: #23D2FD; }
 				
 				
 			#featured-wrap { float: left; width: 100%; }
-				#featured-wrap ul { margin: 40px auto 0 auto; width: 960px; }
-				#featured-wrap li { display: block; float: left; height: 230px; margin: 0 32px 0 0; padding: 10px; position: relative; width: 196px; } 
-				#featured-wrap li:last-child { margin: 0; }
+				#featured-wrap ul { background-color: #e9e9e9; border-bottom: 1px solid #f8f8f8; height: 320px; }
+				#featured-wrap li { color: #666; display: block; float: left; height: 230px; margin: 40px 45px 0 0; padding: 10px; position: relative; width: 196px; } 
+				#featured-wrap li:last-child { margin: 40px 0 0 0; }
 				#featured-wrap h4 { font-weight: 100; margin: 0 0 5px 0; }
 				#featured-wrap li img { height: auto; width: 190px; }
 				#featured-wrap li .featured-img { border: 1px solid #777; display: block; height: 140px; overflow: hidden; padding: 2px; width: 190px; }
 				#featured-wrap .caption { background: rgba(0, 0, 0, 0.6); color: #f8f8f8; display: block; left: 13px; padding: 5px 0 5px 5px; position: absolute; top: 148px; width: 185px; }
-				
+				#featured-wrap a { background: url(../images/mainpage/view_profile_btn.png) no-repeat 0 0; float: left; height: 50px; margin: 0 0 0 4px; text-indent: -9999px; width: 195px; }
+				#featured-wrap a:hover, #featured-wrap a:active { background-position: 0 -51px;}
     
         
     /* Footer */
     
-		footer { background-color: #292524; border-top: 2px solid #111; color: #f8f8f8; float: left; margin: 50px 0 0 0; padding: 0 0 50px 0; width: 100%; }
-			#footer-wrap { margin: 0 auto; width: 960px; }
-			#footer-wrap #footer-cat-wrap { margin: 30px 0 0 0; }
-			#footer-wrap li.title { border-right: 3px solid #444; display: block; float: left; font-size: 12px; margin: 0 27px 0 0; padding: 10px 30px 10px 0; text-transform: uppercase; width: 190px; }
-			#footer-wrap li.title:last-child { border-right: none; margin: 0; padding-right: 0; }
+		footer { background: url(../images/mainpage/footer_tile_bg_texture.png) repeat 0 0; border-top: 5px solid #151515; color: #f8f8f8; float: left; padding: 0 0 10px 0; width: 100%; }
+			#footer-wrap { margin: 50px 0 0 0; }
+			#footer-wrap #footer-cat-wrap { margin: 30px 0 0 15px; }
+			#footer-wrap li.title { background: url(../images/mainpage/footer_category_separator.png) no-repeat 205px 0; display: block; float: left; font-size: 12px; height: 320px; margin: 0 24px 0 0; padding: 10px 30px 10px 0; text-transform: uppercase; width: 200px; }
+			#footer-wrap li.title:last-child { background-image: none; margin: 0; padding-right: 0; }
+			#footer-wrap li img { margin: 10px 0 0 0; }
 			#footer-wrap a:link, #footer-wrap a:visited { color: #f8f8f8; }
 			#footer-wrap a:hover, #footer-wrap a:active { color: #23D2FD; }
 			#footer-wrap address { font-style: normal; }
 			
-			#footer-wrap ul li ul { border-top: 2px solid #444; font-size: 11px; padding: 10px 0 0 0; text-transform: none; }
+			#footer-wrap ul li ul { background: url(../images/mainpage/footer_category_header_border.png) no-repeat 0 0; font-size: 11px; padding: 25px 0 0 0; text-transform: none; }
 			
-			#footer-wrap #facebook li { border-bottom: 2px solid #333; margin: 0 0 5px 0; padding: 0 0 5px 0; }
+			#footer-wrap #facebook li { background: url(../images/mainpage/footer_category_list_border.png) no-repeat 0 30px; margin: 0; padding: 0 0 45px 0; }
+			#footer-wrap #facebook li img { float: left; margin: 0 5px 0 0; } 
 			#footer-wrap #facebook li .like { clear: none; float: left; }
 			
-			#footer-wrap #twitter li { border-bottom: 2px solid #333; margin: 0 0 5px 0; padding: 0 0 5px 0; }
+			#footer-wrap #twitter li { background: url(../images/mainpage/foimagesr_category_list_border.png) no-repeat 0 75px; margin: 0; padding: 0 25px 45px 0;}
 			#footer-wrap #twitter li span.org-day { float: left; width: 100%; }
 			#footer-wrap #twitter li span.org-meta { color: #23D2FD; float: left; width: 100%; }
 			#footer-wrap #twitter li span.org-meta a:link, #footer-wrap #twitter li span.org-meta a:visited { color: #23D2FD; }
 			#footer-wrap #twitter li span.org-meta a:hover, #footer-wrap #twitter li span.org-meta a:active { color: #f8f8f8; }
+			
+			#footer-logo { float: left; margin: -70px 0 0 10px; }
 		
     
 /* Project specifics =========================================================== */
 
 			
 			/* Volunteer Page */
-			#content { margin: 0 auto; width: 960px; }
 			
-			#volunteer #bio { float: left; margin: 35px 0 0 0; width: 700px; }
+			#content-wrap { background-color: #e9e9e9; float: left; margin: 0 auto; width: 1000px;}
+			
+			#volunteer #bio { background-color: #e9e9e9; float: left; margin: 0; padding: 15px; width: 700px; }
 			#volunteer #bio #bio-right { float: left; margin: 10px 0 0 0; padding: 0 5px 0 0; width: 430px; } 
 			#volunteer #bio #bio-left { float: left; margin: 5px 0 0 0; width: 245px; }
 			#volunteer #bio #placeholder { border: 3px solid #fff; display: block; float: left; height: 200px; margin: 10px 0 0 0; width: 200px; }
 			#volunteer #bio h3 { font-size: 30px; }
+			#volunteer #bio h3 img { margin: 0 0 -2px 2px; }
 			#volunteer #bio h4 { color: #23D2FD; font-style: italic; font-weight: normal; margin: 8px 0 0 0; }
 			#volunteer #bio-right h5 { font-size: 17px; font-weight: normal; margin: 0 0 -5px 0; }
 			#volunteer #bio-right p { margin: 10px 0 0 0; }
 			
-			#volunteer #featured-wrap ul { margin: 40px 0 0 0; width: 430px; }
-			#volunteer #featured-wrap li { margin: 0 19px 0 0; padding: 0; }
+			#volunteer #featured-wrap ul { border: none; margin: 40px 0 0 0; width: 430px; }
+			#volunteer #featured-wrap li { border-bottom: 4px solid #23D2FD; height: 205px; margin: 0 38px 0 0; padding: 0; }
+			#volunteer #featured-wrap li h4 { color: #666; font-style: normal; margin: 0 0 5px 0; }
 			#volunteer #featured-wrap .caption { left: 3px; top: 138px; }
-			
+			#volunteer #featured-wrap li a { background-image: none; text-indent: 0; margin: -10px 0 0 2px; padding: 0; }	
+			#volunteer #featured-wrap li:last-child { margin: 0; }
 			
 			#volunteer #medals { float: left; margin: 10px 0 0 0; }
 			#volunteer #medals p { font-size: 11px; }
-			#volunteer #medals li { float: left; }
+			#volunteer #medals li { float: left; margin: 0 5px 0 0; }
 			
 			#volunteer #rank { float: left; margin: 20px 0 0 0; }
 			#volunteer #rank p { font-size: 11px; }
 			#volunteer #rank li { float: left; }
 			
 			#volunteer #count { float: left; margin: 20px 0 0 0; width: 245px; }
-			#volunteer #count li { font-size: 11px; }
+			#volunteer #count li { font-size: 11px; margin: 5px 0 0 0; }
+			#volunteer #count li img { float: left; margin: 0 5px 0 0; }
 			
 			#volunteer #contact { float: left; margin: 40px 0 0 0; }
-			#volunteer #contact li { font-size: 14px; margin: 0 0 20px 0; }
+			#volunteer #contact li { float: left; font-size: 14px; margin: 0 0 10px 0; }
+			#volunteer #contact li a { float: left; height: 50px; text-indent: -9999px; width: 200px;}
 			
-			#volunteer aside { background-color: #ccc; float: right; height: 100%; margin: 0 0 0 10px; padding: 30px 10px 50px 10px; width: 220px; }
+			#volunteer #contact li a#follow-button { background: url(../images/subpages/follow_btn.png) no-repeat 0 0; }
+			#volunteer #contact li a#follow-button:hover, #volunteer #contact li a#follow-button:active { background-position: 0 -51px; }
+			
+			#volunteer #contact li a#send-button { background: url(../images/subpages/send_message_btn.png) no-repeat 0 0; }
+			#volunteer #contact li a#send-button:hover, #volunteer #contact li a#send-button:active { background-position: 0 -51px; }
+			
+			
+			#volunteer aside { background-color: #d8d8d8; border-left: 1px solid #f1f1f1; border-right: 1px solid #f1f1f1; float: right; height: 100%; margin: -27px 20px 0 10px; padding: 50px 10px 90px 10px; width: 215px;  -moz-box-shadow: 0 0 4px #999; -webkit-box-shadow: 0 0 4px #999; box-shadow: 0 0 4px #999; }
 
-			#volunteer aside #calender { border: 2px solid #fff; display: block; height: 200px; margin: 10px auto 10px auto; width: 200px; }
+			#volunteer aside #calender { margin: 10px auto 10px auto; width: 200px; }
 			#volunteer aside li { font-size: 9px; margin: 0 0 0 20px; }
 			
 			#volunteer aside #funded { float: left; margin: 30px 0 0 0; }
 			#volunteer aside #funded li { display: block; height: 30px; float: left; margin: 10px 10px 0 10px; width: 30px; border: 1px solid #000; }
-			#volunteer aside #funded p a { float: right; font-size: 10px; margin: 5px 20px 0 0; } 
+			#volunteer aside #funded p a { float: right; font-size: 10px; margin: 5px 0 0 0; } 
 			
 			#volunteer aside #volunteered-for { float: left; margin: 30px 0 0 0; }
 			#volunteer aside #volunteered-for li { display: block; height: 30px; float: left; margin: 10px 10px 0 10px; width: 30px; border: 1px solid #000; }
-			#volunteer aside #volunteered-for p a { float: right; font-size: 10px; margin: 5px 20px 0 0; } 
+			#volunteer aside #volunteered-for p a { float: right; font-size: 10px; margin: 5px 0 0 0; } 
 			
-			#volunteer footer { margin: 0;}
-
+	
 /* Pour some CSS below ========================================================= */
 

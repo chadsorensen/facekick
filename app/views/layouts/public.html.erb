@@ -6,7 +6,7 @@
   <%= javascript_include_tag :all %>
   <%= csrf_meta_tag %>
 </head>
-<body>
+
 
   <body>
       <div id="page-wrap">
@@ -33,12 +33,25 @@
             </div>
            </header>
 
-
+<%= yield %>
 
   
 <div id="content-wrap">
-              <%= yield %>
-            
+              
+            <div id="slideshow-wrap">
+              <div id="slideshow-inner">
+                
+              <div id="slideshow">
+                <img src="img/img1.jpg" alt="img1" />
+                <img src="img/img2.jpg" alt="img2" data-caption="#htmlCaption" />
+                <img src="img/img3.jpg" alt="img3" />
+              </div><!-- end of slideshow -->
+              
+              <!-- captions for slideshow -->
+              <span class="orbit-caption" id="htmlCaption"><strong>I'm A Badass Caption:</strong> I can haz <a href="#">links</a>, <em>style</em> or anything that is valid markup :)</span>
+              
+              </div><!-- end of slideshow-inner -->
+            </div><!-- end of slideshow-wrap -->
               
   
             <div id="cat-wrap">
@@ -61,7 +74,7 @@
             <div id="featured-wrap">
               <ul>
                 
-               <li><h4>Featured Organization</h4><span class="featured-img"><%= image_tag "featured1.jpg" %></span><span class="caption">Tree Planting</span><br /><a href="#">button</a></li>
+                <li><h4>Featured Organization</h4><span class="featured-img"><%= image_tag "featured1.jpg" %></span><span class="caption">Tree Planting</span><br /><a href="#">button</a></li>
                 <li><h4>Featured Organization</h4><span class="featured-img"><%= image_tag "featured2.jpg" %></span><span class="caption">Grow Rice</span><br /><a href="#">button</a></li>
                 <li><h4>Featured Volunteer</h4><span class="featured-img"><%= image_tag "featured3.jpg" %></span><span class="caption">Jimmy Farmley</span><br /><a href="#">button</a></li>
                 <li><h4>Featured Donor</h4><span class="featured-img"><%= image_tag "featured4.jpg" %></span><span class="caption">Jane Doe</span><br /><a href="#">button</a></li>

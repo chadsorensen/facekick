@@ -35,12 +35,16 @@ class NonProfitsController < ApplicationController
   # GET /non_profits/1/edit
   def edit
     @non_profit = NonProfit.find(params[:id])
+    @non_profit.password = ''
   end
 
   # POST /non_profits
   # POST /non_profits.xml
   def create
     handle_image_upload(params)
+    
+    to_create = params[:non_profit].clone
+    to_create['password'] = (Digest::SHA2.new << to_create['password']).to_s
     
     @non_profit = NonProfit.new(params[:non_profit])
 
@@ -63,6 +67,13 @@ class NonProfitsController < ApplicationController
     @non_profit = NonProfit.find(params[:id])
 
     respond_to do |format|
+      to_update = params[:non_profit].clone
+    if to_update['password'] != ''
+      to_update['password'] = (Digest::SHA2.new << to_update['password']).to_s
+    else
+      to_update.delete('password') # remove password from update params
+    end
+      
       if @non_profit.update_attributes(params[:non_profit])
         format.html { redirect_to(@non_profit, :notice => 'Non profit was successfully updated.') }
         format.xml  { head :ok }

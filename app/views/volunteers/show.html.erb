@@ -1,30 +1,80 @@
-<p id="notice"><%= notice %></p>
+<div id="content-wrap">
 
-<p>
-  <b>Name:</b>
-  <%= @volunteer.name %>
-</p>
+              <div id="content">
 
-<p>
-  <b>Bio:</b>
-  <%= @volunteer.bio %>
-</p>
+                <div id="bio">
+                  <h3><%= @volunteer.name %><a href="#"><%= image_tag "subpages/twitter.png" %></a> <a href="#"><%= image_tag "subpages/linkedin.png" %></a> <a href="#"><%= image_tag "subpages/facebook.png" %></a></h3>
+                  <h4>Funder &amp; Volunteer</h4>
 
-<p>
-  <b>Image:</b>
-  <%= image_tag "volunteers/" + @volunteer.get_image %>
-</p>
+                  <div id="bio-left">
+                    <div><%= image_tag "volunteers/" + @volunteer.get_image %></div>
 
-<p>
-  <b>Pledge:</b>
-  <%= @volunteer.pledge %>
-</p>
+                    <div id="medals">
+                      <p><%= @volunteer.name %> has 2 gold medals!</p>
+                      <ul>
+                        <li><%= image_tag "subpages/gold_medal.png" %></li>
+                        <li><%= image_tag "subpages/gold_medal.png" %></li>
+                      </ul>
+                    </div><!-- end of medals -->
 
-<p>
-  <b>Hours:</b>
-  <%= @volunteer.hours %>
-</p>
+                    <div id="rank">
+                      <p>Until next rank</p>
+                      <ul>
+                        <li><%= image_tag "subpages/heart_full.png" %></li>
+                        <li><%= image_tag "subpages/heart_half.png" %></li>
+                        <li><%= image_tag "subpages/heart_empty.png" %></li>
+                        <li><%= image_tag "subpages/heart_empty.png" %></li>
+                        <li><%= image_tag "subpages/heart_empty.png" %></li>
+                      </ul>
+                    </div><!-- end of rank -->
 
+                    <div id="count">
+                      <ul>
+                        <li><%= image_tag "subpages/dollar_sign.png" %> 8,045 Donated</li>
+                        <li><%= image_tag "subpages/clock_sign.png" %> 5,432 Volunteered</li>
+                      </ul>
+                    </div><!-- end of count -->
 
-<%= link_to 'Edit', edit_volunteer_path(@volunteer) %> |
-<%= link_to 'Back', volunteers_path %>
+                    <div id="contact">
+                      <ul>
+                        <li><a href="#" id="follow-button">Follow Button</a></li>
+                        <li><a href="#" id="send-button">Send Message Button</a></li>
+                      </ul>
+                    </div><!-- end of contact -->
+
+                  </div><!-- end of bio-left -->
+
+                  <div id="bio-right">
+                  <h5>Personal Statement</h5>
+                  <p><%= @volunteer.bio %></p>
+                  <div id="featured-wrap">
+                    <ul>
+                      <li><h4>Favorite Organization</h4><span class="featured-img"><%= image_tag "featured1.jpg" %></span><span class="caption">Tree Planting</span><br /><a href="#">Learn More</a></li>
+                      <li><h4>Most Donated To</h4><span class="featured-img"><%= image_tag "featured1.jpg" %></span><span class="caption">Grow Rice</span><br /><a href="#">Learn More</a></li>
+                    </ul>
+                  </div><!-- end of featured-wrap -->
+
+                  </div><!-- end of bio-right -->
+
+                </div><!-- end of bio -->
+
+                <aside>
+                  <h6>Brianne's Calender</h6>
+                  <div id="calender"><%= image_tag "subpages/calendar.png" %></div>
+
+                  <div id="funded">
+                    <h7>Funded</h7>
+                    <div><%= image_tag "subpages/sidebar_thumbs.png" %></div>
+                    <p><a href="#">View More</a></p>
+                  </div><!-- end of funded -->
+
+                  <div id="volunteered-for">
+                    <h7>Volunteered For</h7>
+                    <div><%= image_tag "subpages/sidebar_thumbs.png" %></div>
+                    <p><a href="#">View More</a></p>
+                  </div><!-- end of volunteered-for -->
+
+                </aside>
+
+              </div><!-- end of content -->
+            </div><!-- end of content-wrap -->
