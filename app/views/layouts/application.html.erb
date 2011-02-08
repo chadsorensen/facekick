@@ -8,7 +8,7 @@
 </head>
 <body>
 
-  <body>
+  <body id="volunteer">
       <div id="page-wrap">
            <header>
             <div id="header-wrap">
@@ -20,8 +20,8 @@
               </div><!-- end of logo-wrap -->
               
               <ul id="funds">
-                <li id="org"><h3>I'm a Non-Profit Organization</h3> <a href="#">Get Funds</a></li>
-                <li id="vol"><h3>I'm a Volunteer or Donor</h3> <a href="#">Give Funds</a></li>
+                <li id="org"><h3>I'm a Non-Profit Organization</h3> <%= link_to 'Get Funds', new_non_profit_path %></li>
+                <li id="vol"><h3>I'm a Volunteer or Donor</h3> <%= link_to 'Give Funds', new_volunteer_path %></li>
                 <li id="banner"><span><h4>New Non-Profit</h4></span></li>
               </ul>
               
@@ -36,41 +36,12 @@
 
 
   
-<div id="content-wrap">
+
               <%= yield %>
             
               
   
-            <div id="cat-wrap">
-              <ul id="categories">
-                <li id="first-cat"><a href="#">Art &amp; Media</a></li>
-                <li><a href="#">Communication</a></li>
-                <li><a href="#">Environmental</a></li>
-                <li><a href="#">Human Rights</a></li>
-                <li><a href="#">Animal Rights</a></li>
-              </ul>
-            </div><!-- end of cat-wrap -->
-            
-            <div id="ticker-wrap">
-              <div id="ticker">
-                <h3>Fundt helped raise &#36;<span id="ticker-money">5,053.45</span> and  <span id="ticker-hours">5645</span> hours so far.</h3>
-              </div><!-- end of ticker -->
-            </div><!-- end of ticker-wrap -->
-              
-              
-            <div id="featured-wrap">
-              <ul>
-                
-               <li><h4>Featured Organization</h4><span class="featured-img"><%= image_tag "featured1.jpg" %></span><span class="caption">Tree Planting</span><br /><a href="#">button</a></li>
-                <li><h4>Featured Organization</h4><span class="featured-img"><%= image_tag "featured2.jpg" %></span><span class="caption">Grow Rice</span><br /><a href="#">button</a></li>
-                <li><h4>Featured Volunteer</h4><span class="featured-img"><%= image_tag "featured3.jpg" %></span><span class="caption">Jimmy Farmley</span><br /><a href="#">button</a></li>
-                <li><h4>Featured Donor</h4><span class="featured-img"><%= image_tag "featured4.jpg" %></span><span class="caption">Jane Doe</span><br /><a href="#">button</a></li>
-              </ul>
-            </div><!-- end of featured-wrap -->
-
-            </div><!-- end of content-wrap -->
-
-
+           
         <footer>
           <div id="footer-wrap">
             <ul id="footer-cat-wrap">

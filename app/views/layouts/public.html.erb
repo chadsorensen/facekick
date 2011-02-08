@@ -2,6 +2,9 @@
 <html>
 <head>
   <title>Facekick</title>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+  
+  <script>var $j = jQuery.noConflict();</script>
   <%= stylesheet_link_tag :all %>
   <%= javascript_include_tag :all %>
   <%= csrf_meta_tag %>
@@ -20,8 +23,8 @@
               </div><!-- end of logo-wrap -->
               
               <ul id="funds">
-                <li id="org"><h3>I'm a Non-Profit Organization</h3> <a href="#">Get Funds</a></li>
-                <li id="vol"><h3>I'm a Volunteer or Donor</h3> <a href="#">Give Funds</a></li>
+                <li id="org"><h3>I'm a Non-Profit Organization</h3> <%= link_to 'Get Funds', new_non_profit_path %></li>
+                <li id="vol"><h3>I'm a Volunteer or Donor</h3> <%= link_to 'Give Funds', new_volunteer_path %></li>
                 <li id="banner"><span><h4>New Non-Profit</h4></span></li>
               </ul>
               
@@ -42,9 +45,9 @@
               <div id="slideshow-inner">
                 
               <div id="slideshow">
-                <img src="img/img1.jpg" alt="img1" />
-                <img src="img/img2.jpg" alt="img2" data-caption="#htmlCaption" />
-                <img src="img/img3.jpg" alt="img3" />
+                <%= image_tag "img1.jpg" %>
+                <%= image_tag "img2.jpg" %>
+                <%= image_tag "img3.jpg" %>
               </div><!-- end of slideshow -->
               
               <!-- captions for slideshow -->

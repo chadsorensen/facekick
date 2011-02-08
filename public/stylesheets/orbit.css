@@ -102,11 +102,11 @@ div.slider-nav span {
     cursor: pointer; }
 
 div.slider-nav span.right {
-    background: url(../img/orbit/right-arrow.png);
+    background: url(../images/orbit/right-arrow.png);
     right: 0; }
 
 div.slider-nav span.left {
-    background: url(../img/orbit/left-arrow.png);
+    background: url(../images/orbit/left-arrow.png);
     left: 0; }
 
 /* BULLET NAV
@@ -124,7 +124,7 @@ div.slider-nav span.left {
     cursor: pointer;
     color: #999;
     text-indent: -9999px;
-    background: url(../img/mainpage/controller1.png) no-repeat 4px 0;
+    background: url(../images/mainpage/controller1.png) no-repeat 4px 0;
     width: 19px;
 		margin: 0 0 10px 0;
     height: 12px;
@@ -132,7 +132,7 @@ div.slider-nav span.left {
 
 .orbit-bullets li.active {
     color: #222;
-    background: url(../img/mainpage/controller2.png) no-repeat 4px 0; }
+    background: url(../images/mainpage/controller2.png) no-repeat 4px 0; }
     
 .orbit-bullets li.has-thumb {
     background: none;
@@ -149,6 +149,6 @@ div.slider-nav span.left {
 #slidshow { 
 	width: 920px;
 	height: 450px;
-	background: #000 url('../img/orbit/loading.gif') no-repeat center center; overflow: hidden; }
+	background: #000 url(../images/orbit/loading.gif) no-repeat center center; overflow: hidden; }
 		     
 #slideshow img, #slideshow div { display: none; }

@@ -1,8 +1,8 @@
-$(function() {
+$j(function() {
 	
-	$(window).load(function() {
+	$j(window).load(function() {
 		
-	  $('#slideshow').orbit({
+	  $j('#slideshow').orbit({
 		animationSpeed: 600,
 		advanceSpeed: 5000,  
 		captions: true, 			
