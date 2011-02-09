@@ -79,8 +79,11 @@
                 
                 <li><h4>Featured Organization</h4><span class="featured-img"><%= image_tag "featured1.jpg" %></span><span class="caption">Tree Planting</span><br /><a href="#">button</a></li>
                 <li><h4>Featured Organization</h4><span class="featured-img"><%= image_tag "featured2.jpg" %></span><span class="caption">Grow Rice</span><br /><a href="#">button</a></li>
-                <li><h4>Featured Volunteer</h4><span class="featured-img"><%= image_tag "featured3.jpg" %></span><span class="caption">Jimmy Farmley</span><br /><a href="#">button</a></li>
-                <li><h4>Featured Donor</h4><span class="featured-img"><%= image_tag "featured4.jpg" %></span><span class="caption">Jane Doe</span><br /><a href="#">button</a></li>
+                
+                 <% @volunteers.each do |volunteer| %>
+                  <li><h4>Featured Volunteer</h4><span class="featured-img"><%= image_tag "volunteers/" + volunteer.get_image, :width=>'190px', :height=>'140px' %></span><span class="caption"><%= volunteer.name %></span><br /><a href="/volunteers/<%= volunteer.id %>"></a></li>
+                <% end %>
+                
               </ul>
             </div><!-- end of featured-wrap -->
 
